@@ -9,5 +9,5 @@
  * Version:     1.0.0
  * License:     GPL-3.0+
  * License URL: https://www.gnu.org/licenses/gpl-3.0.txt
- * text-domain: genesis
+ * text-domain: genesisb
 */
