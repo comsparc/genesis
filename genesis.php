@@ -11,3 +11,17 @@
  * License URL: https://www.gnu.org/licenses/gpl-3.0.txt
  * text-domain: genesis
 */
+
+defined('ABSPATH') or die("0"); // Kill program if entry doesn't have ABSPATH defined
+
+class cGenesis {
+    // methods
+    function __construct($arg) { // construct is the first method called when an instance of a class is created
+        echo $arg;
+    }
+}
+
+if (class_exists('cGenesis')) {
+    $vGenesis = new cGenesis('hello world'); // create an instance of a class
+}
+
