@@ -19,7 +19,7 @@ class cGenesis {
     // function __construct() {} // construct is the first method called when an instance of a class is created
 
     function activate (){
-        echo 'Plugin has been activated';
+        
     }
 
     function deactivate (){
