@@ -17,17 +17,25 @@ defined('ABSPATH') or die("0"); // Kill program if entry doesn't have ABSPATH de
 class cGenesis {
     // methods
     // function __construct() {} // construct is the first method called when an instance of a class is created
+    function __construct() {
+        add_action('init', array ($this, 'custom_post_type'));
+    }
 
     function activate (){
-        
+        // generate a custom post type
+        // flush rewrite rule
     }
 
     function deactivate (){
-
+        // flush rewrite rule
     }
 
     function uninstall (){
 
+    }
+
+    function custom_post_type () {
+        register_post_type('book', ['public' => true, 'label' => 'Books'])
     }
 }
 
