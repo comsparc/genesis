@@ -22,9 +22,11 @@ class cGenesis {
     }
 
     function activate (){
-        // generate a custom post type
-        // flush rewrite rule
-        flush_rewrite_rules();
+        // generate a custom post type. find custom post type method in this class. Added in case init from add_action in __ construct method fails to trigger when plugin is activated
+        $this->custom_post_type(); 
+        
+        // flush rewrite rule. Allow new post added for custom post type to work. Best use when adding and changing DB
+        flush_rewrite_rules();  
     }
 
     function deactivate (){
