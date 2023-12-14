@@ -24,6 +24,7 @@ class cGenesis {
     function activate (){
         // generate a custom post type
         // flush rewrite rule
+        flush_rewrite_rules();
     }
 
     function deactivate (){
@@ -35,7 +36,8 @@ class cGenesis {
     }
 
     function custom_post_type () {
-        register_post_type('book', ['public' => true, 'label' => 'Books']);
+        // Creates a new custom post type that displays on the left nav
+        register_post_type('book', ['public' => true, 'label' => 'Books']); 
     }
 }
 
