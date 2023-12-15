@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package Genesis
+ */
 
 /**
  * Plugin Name: Genesis
@@ -21,6 +24,10 @@ class cGenesis {
         add_action('init', array ($this, 'custom_post_type'));
     }
 
+    function register(){
+        add_action('admin_enqueue_scripts', array($this, 'enqueue'));
+    }
+
     function activate (){
         // generate a custom post type. find custom post type method in this class. Added in case init from add_action in __ construct method fails to trigger when plugin is activated
         $this->custom_post_type(); 
@@ -41,10 +48,16 @@ class cGenesis {
         // Creates a new custom post type that displays on the left nav
         register_post_type('book', ['public' => true, 'label' => 'Books']); 
     }
+
+    function enqueue (){
+        // enqueue all scripts
+        wp_enqueue_style('mypluginstyle', plugins_url('/assets/mystyle.css', __FILE__));
+    }
 }
 
 if (class_exists('cGenesis')) {
     $vGenesis = new cGenesis(); // create an instance of a class
+    $vGenesis->register();
 }
 
 // 3 triggers of a plugin
@@ -56,3 +69,4 @@ register_activation_hook(__FILE__, array ($vGenesis,'activate'));
 register_deactivation_hook(__FILE__, array ($vGenesis,'deactivate'));
 
 // uninstall
+register_uninstall_hook(__FILE__, array ($vGenesis,'uninstall'));
