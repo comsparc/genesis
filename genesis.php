@@ -26,7 +26,7 @@ class cGenesis {
 
     function register(){
         // place css scripts in backend. Use wp_enqueue_script to place css in frontend
-        add_action('admin_enqueue_scripts', array($this, 'enqueue')); 
+        add_action('wp_enqueue_scripts', array($this, 'enqueue')); 
     }
 
     function activate (){
