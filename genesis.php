@@ -82,8 +82,8 @@ require_once plugin_dir_path(__FILE__).'include/genesis-plugin-activate.php';
 register_activation_hook(__FILE__, array ('GenesisPluginActivate','activate'));
 
 // Deactivation
-// require_once plugin_dir_path(__FILE__).'include/genesis-plugin-deactivate.php'
-// register_deactivation_hook(__FILE__, array ('GenesisPluginDeactivate','deactivate'));
+require_once plugin_dir_path(__FILE__).'include/genesis-plugin-deactivate.php';
+register_deactivation_hook(__FILE__, array ('GenesisPluginDeactivate','deactivate'));
 
 // uninstall
 // register_uninstall_hook(__FILE__, array ($vGenesis,'uninstall'));
