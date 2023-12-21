@@ -75,7 +75,7 @@ if (class_exists('cGenesis')) {
 
 // 3 triggers of a plugin
 // Activation
-// require_once plugin_dir_path(__FILE__).'include/genesis-plugin-activate.php'
+require_once plugin_dir_path(__FILE__).'include/genesis-plugin-activate.php';
 
 // registration hook to this file using function activate from class instance vGenesis
 // calling static method without creating instance of a class
