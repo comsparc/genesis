@@ -87,5 +87,3 @@ if (class_exists('cGenesis')) {
 
 // uninstall
 // register_uninstall_hook(__FILE__, array ($vGenesis,'uninstall'));
-
-register ();
