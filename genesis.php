@@ -73,7 +73,7 @@ class cGenesis {
     }
 
     function deactivate() {
-        // require_once plugin_dir_path(__FILE__).'include/genesis-plugin-deactivate.php';
+        require_once plugin_dir_path(__FILE__).'include/genesis-plugin-deactivate.php';
         // GenesisPluginDeactivate::deactivate();
     }
 }
