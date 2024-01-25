@@ -68,6 +68,7 @@ class cGenesis {
     }
 
     function activate() {
+        echo 'hello!';
         flush_rewrite_rules();
         // require_once plugin_dir_path(__FILE__).'include/genesis-plugin-activate.php';
         // GenesisPluginActivate::activate();
