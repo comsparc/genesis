@@ -68,13 +68,13 @@ class cGenesis {
     }
 
     function activate() {
-        // require_once plugin_dir_path(__FILE__).'include/genesis-plugin-activate.php';
+        require_once plugin_dir_path(__FILE__).'include/genesis-plugin-activate.php';
         // GenesisPluginActivate::activate();
     }
 
     function deactivate() {
-        require_once plugin_dir_path(__FILE__).'include/genesis-plugin-deactivate.php';
-        GenesisPluginDeactivate::deactivate();
+        // require_once plugin_dir_path(__FILE__).'include/genesis-plugin-deactivate.php';
+        // GenesisPluginDeactivate::deactivate();
     }
 }
 
