@@ -73,7 +73,6 @@ class cGenesis {
     }
 
     function deactivate() {
-        flush_rewrite_rules();
         // require_once plugin_dir_path(__FILE__).'include/genesis-plugin-deactivate.php';
         // GenesisPluginDeactivate::deactivate();
     }
@@ -89,7 +88,7 @@ if (class_exists('cGenesis')) {
 // register_activation_hook(__FILE__, array ('vGenesis','activate'));
 
 // Deactivation
-register_deactivation_hook(__FILE__, array ('vGenesis','deactivate'));
+// register_deactivation_hook(__FILE__, array ('vGenesis','deactivate'));
 
 // uninstall
 // register_uninstall_hook(__FILE__, array ($vGenesis,'uninstall'));
