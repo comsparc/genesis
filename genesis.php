@@ -66,6 +66,11 @@ class cGenesis {
         wp_enqueue_style('mypluginstyle', plugins_url('/assets/mystyle.css', __FILE__));
         wp_enqueue_script('mypluginscript', plugins_url('/assets/myscript.js', __FILE__));
     }
+
+    function activate() {
+        require_once plugin_dir_path(__FILE__).'include/genesis-plugin-activate.php';
+        GenesisPluginActivate::activate();
+    }
 }
 
 if (class_exists('cGenesis')) {
@@ -75,11 +80,11 @@ if (class_exists('cGenesis')) {
 
 // 3 triggers of a plugin
 // Activation
-require_once plugin_dir_path(__FILE__).'include/genesis-plugin-activate.php';
+
 
 // registration hook to this file using function activate from class instance vGenesis
 // calling static method without creating instance of a class
-register_activation_hook(__FILE__, array ('GenesisPluginActivate','activate'));
+register_activation_hook(__FILE__, array ('vGenesis','activate'));
 
 // Deactivation
 require_once plugin_dir_path(__FILE__).'include/genesis-plugin-deactivate.php';
