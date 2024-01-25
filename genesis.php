@@ -68,8 +68,6 @@ class cGenesis {
     }
 
     function activate() {
-        echo 'hello!';
-        flush_rewrite_rules();
         // require_once plugin_dir_path(__FILE__).'include/genesis-plugin-activate.php';
         // GenesisPluginActivate::activate();
     }
@@ -87,7 +85,7 @@ if (class_exists('cGenesis')) {
 
 // 3 triggers of a plugin
 // Activation
-register_activation_hook(__FILE__, array ('vGenesis','activate'));
+register_activation_hook(__FILE__, array ($vGenesis,'activate'));
 
 // Deactivation
 // register_deactivation_hook(__FILE__, array ('vGenesis','deactivate'));
