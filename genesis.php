@@ -71,6 +71,11 @@ class cGenesis {
         require_once plugin_dir_path(__FILE__).'include/genesis-plugin-activate.php';
         GenesisPluginActivate::activate();
     }
+
+    function deactivate() {
+        require_once plugin_dir_path(__FILE__).'include/genesis-plugin-deactivate.php';
+        GenesisPluginDeactivate::deactivate();
+    }
 }
 
 if (class_exists('cGenesis')) {
@@ -80,15 +85,10 @@ if (class_exists('cGenesis')) {
 
 // 3 triggers of a plugin
 // Activation
-
-
-// registration hook to this file using function activate from class instance vGenesis
-// calling static method without creating instance of a class
 register_activation_hook(__FILE__, array ('vGenesis','activate'));
 
 // Deactivation
-require_once plugin_dir_path(__FILE__).'include/genesis-plugin-deactivate.php';
-register_deactivation_hook(__FILE__, array ('GenesisPluginDeactivate','deactivate'));
+register_deactivation_hook(__FILE__, array ('vGenesis','deactivate'));
 
 // uninstall
 // register_uninstall_hook(__FILE__, array ($vGenesis,'uninstall'));
