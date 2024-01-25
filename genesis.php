@@ -68,8 +68,8 @@ class cGenesis {
     }
 
     function activate() {
-        // require_once plugin_dir_path(__FILE__).'include/genesis-plugin-activate.php';
-        // GenesisPluginActivate::activate();
+        require_once plugin_dir_path(__FILE__).'include/genesis-plugin-activate.php';
+        GenesisPluginActivate::activate();
     }
 
     function deactivate() {
