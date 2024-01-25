@@ -5,7 +5,6 @@
 
  class GenesisPluginActivate {
     public static function activate() {
-        echo 'hello world!';
-        flush_rewrite_rules();
+          flush_rewrite_rules();
     }
  }
