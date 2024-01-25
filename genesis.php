@@ -85,10 +85,10 @@ if (class_exists('cGenesis')) {
 
 // 3 triggers of a plugin
 // Activation
-register_activation_hook(__FILE__, array ('vGenesis','activate'));
+// register_activation_hook(__FILE__, array ('vGenesis','activate'));
 
 // Deactivation
-// register_deactivation_hook(__FILE__, array ('vGenesis','deactivate'));
+register_deactivation_hook(__FILE__, array ('vGenesis','deactivate'));
 
 // uninstall
 // register_uninstall_hook(__FILE__, array ($vGenesis,'uninstall'));
