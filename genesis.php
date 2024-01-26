@@ -42,7 +42,7 @@ class cGenesis {
     }
 
     public function add_admin_pages(){
-        add_menu_page('Genesis', 'Genesis Power', 'manage_options', 'genesis_plugin', array($this, 'admin_index'), 'dashicons-store', 110);
+        add_menu_page('Genesis', 'Genesis Tool', 'manage_options', 'csc-genesis', array($this, 'admin_index'), 'dashicons-cover-image', 110);
     }
 
     public function admin_index(){
