@@ -37,6 +37,16 @@ class cGenesis {
     function register(){
         // place css scripts in backend using admin. Use wp_enqueue_script to place css in frontend
         add_action('admin_enqueue_scripts', array($this, 'enqueue')); 
+
+        add_action('admin_menu', array($this, 'add_admin_pages'));
+    }
+
+    public function add_admin_pages(){
+        add_menu_page('Genesis Plugin', 'Genesis menu title', 'manage_option', 'genesis_plugin', array($this, 'admin_index'), 'dashicons-store', 110);
+    }
+
+    public function admin_index(){
+        // required template
     }
 
 /*     function activate (){
