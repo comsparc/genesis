@@ -38,11 +38,12 @@ class cGenesis {
         // place css scripts in backend using admin. Use wp_enqueue_script to place css in frontend
         add_action('admin_enqueue_scripts', array($this, 'enqueue')); 
 
+        // add program to WP left menu
         add_action('admin_menu', array($this, 'add_admin_pages'));
     }
 
     public function add_admin_pages(){
-        add_menu_page('Genesis', 'Genesis Tool', 'manage_options', 'csc-genesis', array($this, 'admin_index'), 'dashicons-cover-image', 110);
+        add_menu_page('Genesis', 'Genesis Tool', 'manage_option', 'csc-genesis', array($this, 'admin_index'), 'dashicons-cover-image', 110);
     }
 
     public function admin_index(){
