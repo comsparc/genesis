@@ -19,6 +19,7 @@ defined('ABSPATH') or die("0"); // Kill program if entry doesn't have ABSPATH de
 
 class cGenesis {
 
+    public $pluginName
     // Public method can be accessed everywhere. Default method is public
 
     // Protected method can be accessed within class or extension of class
@@ -26,12 +27,10 @@ class cGenesis {
     // Private method can be access within class
 
     // Static (public static <method>) - can use method without initializing class ex. cGenesis::register()
-
-
-    // methods
-    // function __construct() {} // construct is the first method called when an instance of a class is created
-/*     function __construct() {
-        add_action('init', array ($this, 'custom_post_type'));
+    
+    // construct is the first method called when an instance of a class is created
+    function __construct() {
+        $this->pluginName = plugin_basename(__FILE__);
     } */
 
     function register(){
@@ -40,6 +39,15 @@ class cGenesis {
 
         // add program to WP left menu
         add_action('admin_menu', array($this, 'add_admin_pages'));
+
+        // add additional links to list of plugin
+        add_filter('plugin_action_links_'.$this->pluginName, array ($this, 'settings_link'));
+    }
+
+    public function settings_link ($links) {
+        $settings_link = '<a href="admin.php?page=csc-genesis">Settings</a>';
+        array_push($links,$settings_link);
+        return $links;
     }
 
     public function add_admin_pages(){
