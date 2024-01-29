@@ -19,7 +19,7 @@ defined('ABSPATH') or die("0"); // Kill program if entry doesn't have ABSPATH de
 
 class cGenesis {
 
-    public $pluginName
+    public $pluginName;
     // Public method can be accessed everywhere. Default method is public
 
     // Protected method can be accessed within class or extension of class
@@ -31,7 +31,7 @@ class cGenesis {
     // construct is the first method called when an instance of a class is created
     function __construct() {
         $this->pluginName = plugin_basename(__FILE__);
-    } */
+    } 
 
     function register(){
         // place css scripts in backend using admin. Use wp_enqueue_script to place css in frontend
