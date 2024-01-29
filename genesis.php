@@ -47,7 +47,7 @@ class cGenesis {
     }
 
     public function admin_index(){
-        // required template
+        require_once plugin_dir_path(__FILE__).'templates/admin.php';
     }
 
 /*     function activate (){
