@@ -19,6 +19,7 @@ defined('ABSPATH') or die("0"); // Kill program if entry doesn't have ABSPATH de
 
 if ( file_exists(dirname( __FILE__ ).'/vendor/autoload.php')) {
     require_once dirname( __FILE__ ).'/vendor/autoload.php';
+    echo 'hello world';
 }
 
 class cGenesis {
