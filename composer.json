@@ -1,0 +1,17 @@
+{
+    "name": "scott/genesis",
+    "description": "Whatever description I want",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Scott W. Lee",
+            "email": "scott.lee@comsparc.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload" :{
+        "psr-4": {"inc\\":"./include"}
+    }
+}
