@@ -21,6 +21,8 @@ if ( file_exists(dirname( __FILE__ ).'/vendor/autoload.php')) {
     require_once dirname( __FILE__ ).'/vendor/autoload.php';
 }
 
+use inc\Activate;
+
 class cGenesis {
 
     public $pluginName;
@@ -91,8 +93,8 @@ class cGenesis {
     }
 
     function activate() {
-        require_once plugin_dir_path(__FILE__).'include/genesis-plugin-activate.php';
-        GenesisPluginActivate::activate();
+        // require_once plugin_dir_path(__FILE__).'include/genesis-plugin-activate.php';
+        Activate::activate();
     }
 
     function deactivate() {
