@@ -22,6 +22,8 @@ if ( file_exists(dirname( __FILE__ ).'/vendor/autoload.php')) {
 }
 
 use inc\Activate;
+use inc\Deactivate;
+
 
 class cGenesis {
 
@@ -98,8 +100,8 @@ class cGenesis {
     }
 
     function deactivate() {
-        require_once plugin_dir_path(__FILE__).'include/genesis-plugin-deactivate.php';
-        GenesisPluginDeactivate::deactivate();
+        // require_once plugin_dir_path(__FILE__).'include/genesis-plugin-deactivate.php';
+        Deactivate::deactivate();
     }
 }
 
