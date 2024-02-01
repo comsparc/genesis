@@ -6,7 +6,7 @@
  namespace inc;
  
  class Init {
-    function __construct {
+    function __construct() {
       
     }
  }
