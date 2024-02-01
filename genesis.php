@@ -23,7 +23,7 @@ if ( file_exists(dirname( __FILE__ ).'/vendor/autoload.php')) {
 
 use inc\Activate;
 use inc\Deactivate;
-
+use inc\Admin\AdminPages;
 
 class cGenesis {
 
