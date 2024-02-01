@@ -1,8 +1,8 @@
 <?php
 
-namespace inc\Admin;
+namespace inc\Pages;
 
-class add_admin_pages{
+class Admin{
     function __construct()
     {
         
