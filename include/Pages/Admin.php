@@ -3,10 +3,6 @@
 namespace inc\Pages;
 
 class Admin{
-    function __construct()
-    {
-        
-    }
 
     public function register() { // used to trigger all the methods needed
          // add program to WP left menu
