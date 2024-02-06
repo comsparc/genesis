@@ -10,7 +10,7 @@ class Enqueue{
 
     function enqueue (){
         // enqueue all scripts
-        wp_enqueue_style('mypluginstyle', plugins_url('/assets/mystyle.css', __FILE__));
-        wp_enqueue_script('mypluginscript', plugins_url('/assets/myscript.js', __FILE__));
+        wp_enqueue_style('mypluginstyle', PLUGIN_URL.'/assets/mystyle.css');
+        wp_enqueue_script('mypluginscript', PLUGIN_URL.'/assets/myscript.js');
     }
 }

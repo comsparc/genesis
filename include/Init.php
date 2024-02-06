@@ -12,7 +12,8 @@
 
    public static function get_services(){
       return [
-         Pages\Admin::class // return list of classes without creating instances
+         Pages\Admin::class, // return list of classes without creating instances
+         Base\Enqueue::class
       ];
 
    } 
