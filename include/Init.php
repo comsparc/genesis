@@ -5,8 +5,8 @@
 
  namespace inc;
  
- class Init {
-    function __construct() {
+ final class Init { //final mean telling php not to allow extending this class
+    public static function register_services() {
       
     }
  }
