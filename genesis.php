@@ -28,3 +28,11 @@ define('PLUGIN',plugin_basename(__FILE__));
 if (class_exists('inc\\Init')) {
     Inc\Init::register_services();
 }
+
+add_filter("plugin_action_links", array($this, 'settings_link'));
+
+public function settings_link($links) {
+    $settings_link = '<a href="admin.php?page=genesis">Settings</a>';
+    array_push($links, $settings_link);
+    return $links;
+}
