@@ -36,3 +36,4 @@ public function settings_link($links) {
     array_push($links, $settings_link);
     return $links;
 }
+}
