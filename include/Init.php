@@ -14,7 +14,7 @@
       return [
          Pages\Admin::class, // return list of classes without creating instances
          Base\Enqueue::class,
-         // Base\SettingsLinks::class
+         Base\SettingsLinks::class
       ];
 
    } 
